@@ -1,11 +1,42 @@
 // Imports go Here
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-//import GetMenuData from "./APICaller";
 import Splash from "./Splash";
 import MenuCard from "./MenuCard";
-//import SortDishesIntoCategories from "./ParseAPIResults";
-//import { useState } from "react";
+
+let parsedMenuData = []; // Global variable to hold sorted returned API data for use by components
+
+function menuParser(menu) {
+  //console.log("This is the menuParser() function.")
+
+  //menu.forEach(dish => console.log(dish));
+
+  const appetizer = menu.filter(dish => dish.category.title === "Appetizer");
+  const breakfast = menu.filter(dish => dish.category.title === "Breakfast");
+  const lunch = menu.filter(dish => dish.category.title === "Lunch");
+  const dinner = menu.filter(dish => dish.category.title === "Dinner");
+  const desserts = menu.filter(dish => dish.category.title === "Dessert");
+  const brunch = menu.filter(dish => dish.category.title === "Brunch");
+  const sides = menu.filter(dish => dish.category.title === "Side");
+
+  // parsedMenuData.push(appetizer);
+  // parsedMenuData.push(breakfast);
+  // parsedMenuData.push(lunch);
+  // parsedMenuData.push(dinner);
+  // parsedMenuData.push(desserts);
+  // parsedMenuData.push(brunch);
+  // parsedMenuData.push(sides);
+
+  console.log(parsedMenuData);
+
+  // console.log("Appetizers: ", appetizer);
+  // console.log("Breakfast:", breakfast);
+  // console.log("Lunch: ", lunch);
+  // console.log("Dinner: ", dinner);
+  // console.log("Desserts: ", desserts);
+  // console.log("Brunch: ", brunch);
+  // console.log("Sides: ", sides);
+}
 
 function App() {
 
@@ -34,11 +65,14 @@ useEffect(() => {
     console.log("Inside App function.");
     //const [post] = React.useState(null);
 
+    menuParser(menuData);
+
     return (
       <>
         <Splash />
-
-        <MenuCard menu={menuData} />
+        <h1>Dinner</h1>
+        {parsedMenuData.dinner}
+        <MenuCard menu={parsedMenuData} />
       </>
     );
   }
