@@ -1,7 +1,12 @@
 function MenuCard(menu) {
     console.log("Inside the MenuCard component. Recieved from App: ", menu);
-    // menu.array.forEach(element => {
-    //     console.log(element.description);
+    console.log("Incoming values are: ", Object.values(menu));
+
+    for (const title in menu)
+        { console.log(`${title}: ${menu[title]}`);
+    };
+    //console.log(menu[6].title);
+    //menu.forEach(element => console.log(element.description));
     // });
     // return (
     //     <div className="row row-cols-1 row-cols-md-3 g-4">
@@ -27,5 +32,4 @@ function MenuCard(menu) {
     // const listItems = menu.map(dish => <li>{dish}</li>);
  //return <ul>{listItems}</ul>;
 };
-
 export default MenuCard;
