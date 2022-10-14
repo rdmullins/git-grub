@@ -19,7 +19,21 @@ function MenuCard(menu) {
         </div>)
         );
 
-    return (<ul>{listItems}</ul>)
+    return (
+        <div className="container text-center">
+            {(menu.page === 1) && <h1>Appetizers</h1>}
+            {(menu.page === 2) && <h1>Breakfast</h1>}
+            {(menu.page === 3) && <h1>Brunch</h1>}
+            {(menu.page === 4) && <h1>Lunch</h1>}
+            {(menu.page === 5) && <h1>Dinner</h1>}
+            {(menu.page === 6) && <h1>Side Dishes</h1>}
+            {(menu.page === 7) && <h1>Desserts</h1>}
+    
+    
+    <ul>{listItems}</ul>
+    
+    </div>
+    )
 
     // return (
     //     <>
