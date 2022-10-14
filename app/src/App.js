@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Splash from "./Splash";
 import MenuCard from "./MenuCard";
+import Navbar from "./Navbar";
 
 // Global variable to hold sorted returned API data for use by components
 
@@ -30,14 +31,16 @@ function menuParser(menu) {
 function App() {
 
 const [menuData, setMenuData] = useState([]);
-console.log(menuData);
+const [page, setPage] = useState(0);
+//console.log(menuData);
+
 useEffect(() => {
   let endpoint = "https://astute-baton-362318.ue.r.appspot.com/api/json/"
   axios.get(endpoint)
     .then((response)=> setMenuData(response.data))
 },[]);
 
-    console.log("Inside App function.");
+    //console.log("Inside App function.");
     //const [post] = React.useState(null);
     
     menuParser(menuData);
@@ -50,9 +53,11 @@ useEffect(() => {
 
     return (
       <>
-        <Splash />
-        <h1>Dinner</h1>
-        <MenuCard menuData={dinner} />
+        {(page == 0) && <Splash pageUpdater={setPage} />}
+        {(page > 0) && <Navbar pageUpdater={setPage} />}
+        {(page == 1) && <MenuCard menuData={dinner} />}
+        {(page == 2) && <h1>This is page 2.</h1>}
+
 
       </>
     );
