@@ -1,5 +1,6 @@
 // Imports go Here
 import React, { useState, useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import Splash from "./Splash";
 import MenuCard from "./MenuCard";
@@ -17,6 +18,7 @@ let lunch = [];
 let dinner = [];
 let sides = [];
 let desserts = [];
+let specials = [];
 
 
 function menuParser(menu) {
@@ -29,6 +31,26 @@ function menuParser(menu) {
   desserts = menu.filter(dish => dish.category.title === "Dessert");
   brunch = menu.filter(dish => dish.category.title === "Brunch");
   sides = menu.filter(dish => dish.category.title === "Side");
+
+}
+
+function getSpecials() {
+  specials = [];
+  let app = appetizers[Math.floor(Math.random() * appetizers.length)];
+  //console.log("Appetizer course is: ", app);
+
+  let mains = breakfast.concat(brunch).concat(lunch).concat(dinner);
+  let main = mains[Math.floor(Math.random() * mains.length)];
+  //console.log("Main course is: ", mains);
+
+  let side = sides[Math.floor(Math.random() * sides.length)];
+  //console.log("Side dish is: ", side);
+
+  let dessert = desserts[Math.floor(Math.random() * desserts.length)];
+  //console.log("Dessert is: ", dessert);
+
+  specials = specials.concat(app).concat(main).concat(side).concat(dessert);
+  //console.log("Specials are: ", specials);
 
 }
 
@@ -48,6 +70,7 @@ useEffect(() => {
     //const [post] = React.useState(null);
     
     menuParser(menuData);
+    getSpecials();
 
     if (menuData.length === 0) return (
       <div className="spinner-border text-primary" role="status">
@@ -58,17 +81,17 @@ useEffect(() => {
     return (
       <div className="container">
         {(page === 0) && <Splash pageUpdater={setPage} />}
-        {(page > 0 && page < 8) && <Navbar pageUpdater={setPage} />}
-        {(page === 1) && <MenuCard menuData={appetizers} pageUpdater={setPage} />}
-        {(page === 2) && <MenuCard menuData={breakfast} pageUpdater={setPage} />}
-        {(page === 3) && <MenuCard menuData={brunch} pageUpdater={setPage} />}
-        {(page === 4) && <MenuCard menuData={lunch} pageUpdater={setPage} />}
-        {(page === 5) && <MenuCard menuData={dinner} pageUpdater={setPage} />}
-        {(page === 6) && <MenuCard menuData={sides} pageUpdater={setPage} />}
-        {(page === 7) && <MenuCard menuData={desserts} pageUpdater={setPage} />}
+        {(page > 0 && page != 8) && <Navbar pageUpdater={setPage} />}
+        {(page === 1) && <MenuCard page={page} menuData={appetizers} pageUpdater={setPage} />}
+        {(page === 2) && <MenuCard page={page} menuData={breakfast} pageUpdater={setPage} />}
+        {(page === 3) && <MenuCard page={page} menuData={brunch} pageUpdater={setPage} />}
+        {(page === 4) && <MenuCard page={page} menuData={lunch} pageUpdater={setPage} />}
+        {(page === 5) && <MenuCard page={page} menuData={dinner} pageUpdater={setPage} />}
+        {(page === 6) && <MenuCard page={page} menuData={sides} pageUpdater={setPage} />}
+        {(page === 7) && <MenuCard page={page} menuData={desserts} pageUpdater={setPage} />}
         {(page === 8) && <Menu pageUpdater={setPage} />}
-        {(page === 9) && <Specials pageUpdater={setPage} />}
-        {(page > 0 && page <8) && <Footer />}
+        {(page === 9) && <Specials menuData={specials} pageUpdater={setPage} />}
+        {(page > 0 && page != 8) && <Footer />}
       </div>
     );
   }

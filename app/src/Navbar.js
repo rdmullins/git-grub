@@ -9,6 +9,7 @@ function Navbar(props) {
             <div className="container-fluid">
                 <div className="navbar-brand">
                     <img src="../GitGrubCropped.png" alt="Restaurant Logo" width="15%"></img>
+                    <small>7-11 Daily</small>
                 </div>
 
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,26 +19,29 @@ function Navbar(props) {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <button onClick={() => {handleClick(2)}} className="btn btn-danger">Breakfast</button>
+                            <button onClick={() => {handleClick(2)}} className="btn btn-info m-1">Breakfast</button>
                         </li>
                         <li className="nav-item">
-                            <button onClick={() => {handleClick(1)}} className="btn btn-danger">Appetizers</button>
+                            <button onClick={() => {handleClick(1)}} className="btn btn-info m-1">Appetizers</button>
                         </li>
                         <li className="nav-item">
-                            <button onClick={() => {handleClick(3)}} className="btn btn-danger">Brunch</button>
+                            <button onClick={() => {handleClick(3)}} className="btn btn-info m-1">Brunch</button>
                         </li>
                         <li className="nav-item">
-                            <button onClick={() => {handleClick(4)}} className="btn btn-danger">Lunch</button>
+                            <button onClick={() => {handleClick(4)}} className="btn btn-info m-1">Lunch</button>
                         </li>
                         <li className="nav-item">
-                            <button onClick={() => {handleClick(5)}} className="btn btn-danger">Dinner</button>
+                            <button onClick={() => {handleClick(5)}} className="btn btn-info m-1">Dinner</button>
                         </li>
                         <li className="nav-item">
-                            <button onClick={() => {handleClick(7)}} className="btn btn-danger">Desserts</button>
+                            <button onClick={() => {handleClick(7)}} className="btn btn-info m-1">Desserts</button>
                         </li>
                         <li className="nav-item">
-                            <button onClick={() => {handleClick(6)}} className="btn btn-danger">Sides</button>
-                        </li>                          
+                            <button onClick={() => {handleClick(6)}} className="btn btn-info m-1">Sides</button>
+                        </li>  
+                        <li className="nav-item">
+                            <button onClick={() => {handleClick(9)}} className="btn btn-danger m-1">Today's Specials</button>
+                        </li>                        
                     </ul>
                 </div>
             </div>
