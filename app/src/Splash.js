@@ -12,8 +12,8 @@ function Splash(props) {
             <h2>Lexington, KY</h2>
             <h3>A Fusion Gastro-Pub Merging International Cuisines</h3>
             <h3>Grab a Fork!</h3>
-            <button onClick={() => {handleClick(0)}} className="btn btn-danger">Today's Specials</button>
-            <button onClick={() => {handleClick(1)}} className="btn btn-success">Our Menu</button>
+            <button onClick={() => {handleClick(9)}} className="btn btn-danger">Today's Specials</button>
+            <button onClick={() => {handleClick(8)}} className="btn btn-success">Our Menu</button>
         </div>
     )
 };

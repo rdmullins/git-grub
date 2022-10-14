@@ -1,18 +1,38 @@
 function MenuCard(menu) {
-    let dishesList = [];
-    console.log("Inside the MenuCard component. Recieved from App: ", menu);
-    return (
-        <>
-            <ul>
-                <li>{menu.menuData[4].title}
-                    <ul>
-                        <li>{menu.menuData[4].description}</li>
-                        <li>{menu.menuData[4].price}</li>
-                    </ul>
-                </li>
-            </ul>
-        </>
-    )
+    //let dishesList = [];
+    //console.log("Inside the MenuCard component. Recieved from App: ", menu);
+
+    //const listItems = menu.menuData.map(dish => <li>{dish.title}<ul><li>{dish.description}</li><li>{dish.price}</li></ul></li>);
+
+    //const listItems = menu.menuData.map(dish => <div className="card text-center"><div className="card-header"></div><div className="card-body"><h5 className="card-title">{dish.title}</h5><p className="card-text">{dish.description}</p></div><div className="card-footer text-muted">{dish.price}</div></div>);
+
+    const listItems = menu.menuData.map(dish =>
+        (<div className="card text-center">
+            <div className="card-header"></div>
+            <div className="card-body">
+                <h5 className="card-title">{dish.title}</h5>
+                <p className="card-text">{dish.description}</p>
+            </div>
+            <div className="card-footer text-muted">
+                {dish.price}
+            </div>
+        </div>)
+        );
+
+    return (<ul>{listItems}</ul>)
+
+    // return (
+    //     <>
+    //         <ul>
+    //             <li>{menu.menuData[0].title}
+    //                 <ul>
+    //                     <li>{menu.menuData[0].description}</li>
+    //                     <li>{menu.menuData[0].price}</li>
+    //                 </ul>
+    //             </li>
+    //         </ul>
+    //     </>
+    // )
     // for (let i=0; i<menu.menuData.length; i++) {
     //     let menuItem = "";
     //     console.log(menu.menuData[i].title);
