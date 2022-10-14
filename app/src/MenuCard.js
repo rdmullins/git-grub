@@ -1,10 +1,32 @@
 function MenuCard(menu) {
+    let dishesList = [];
     console.log("Inside the MenuCard component. Recieved from App: ", menu);
-    console.log("Incoming values are: ", Object.values(menu));
-
-    for (const title in menu)
-        { console.log(`${title}: ${menu[title]}`);
+    for (let i=0; i<menu.menuData.length; i++) {
+        let menuItem = "";
+        console.log(menu.menuData[i].title);
+            menuItem = menuItem + `<li>${menu.menuData[i].title}<ul>`;
+        console.log(menu.menuData[i].description);
+            menuItem = menuItem + `<li>${menu.menuData[i].description}</li><li>`;
+        console.log(menu.menuData[i].price);
+            menuItem = menuItem + `${menu.menuData[i].price}</li></ul></li>`
+        console.log(menuItem);
+        dishesList.push(menuItem);
     };
+    console.log(dishesList);
+
+    const listItems = menu.menuData.map(title => <li>{menu.menuData.title}</li>);
+
+    return (<ul>{dishesList}</ul>);
+    //console.log(menuData.menu[9].description);
+    // for (dish in data) {
+    //     console.log(dish.description);
+    // }
+    // //console.log("Incoming values are: ", Object.values(menu));
+    //console.log(menu.dinnerMenu[0].title);
+
+    // for (const title in menu)
+    //     { console.log(`${title}: ${menu[title]}`);
+    // };
     //console.log(menu[6].title);
     //menu.forEach(element => console.log(element.description));
     // });

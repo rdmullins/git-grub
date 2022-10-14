@@ -39,15 +39,21 @@ useEffect(() => {
 
     console.log("Inside App function.");
     //const [post] = React.useState(null);
-
+    
     menuParser(menuData);
+
+    if (menuData.length === 0) return (
+      <div className="spinner-border text-primary" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </div>
+      );
 
     return (
       <>
         <Splash />
         <h1>Dinner</h1>
-      
-        <MenuCard {...dinner}/>
+        <MenuCard menuData={dinner} />
+
       </>
     );
   }
