@@ -56,7 +56,7 @@ useEffect(() => {
       );
 
     return (
-      <>
+      <div className="container">
         {(page === 0) && <Splash pageUpdater={setPage} />}
         {(page > 0 && page < 8) && <Navbar pageUpdater={setPage} />}
         {(page === 1) && <MenuCard menuData={appetizers} pageUpdater={setPage} />}
@@ -69,7 +69,7 @@ useEffect(() => {
         {(page === 8) && <Menu pageUpdater={setPage} />}
         {(page === 9) && <Specials pageUpdater={setPage} />}
         {(page > 0 && page <8) && <Footer />}
-      </>
+      </div>
     );
   }
   
