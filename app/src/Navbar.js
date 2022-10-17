@@ -17,7 +17,7 @@ function Navbar(props) {
                 </button>
 
                 <div className="d-flex collapse navbar-collapse justify-content-end gitgrub-navbar-brand" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
                         <li className="nav-item">
                             <button onClick={() => {handleClick(2)}} className="gitgrub-btn m-1">Breakfast</button>
                         </li>
