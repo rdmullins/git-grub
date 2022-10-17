@@ -12,32 +12,32 @@ function Menu (props) {
                 </div>
             </div>
             <div className="row text-center">
-                <div className="col-sm-6 bg-info text-light">
-                    <button onClick={() => {handleClick(2)}} className="btn btn-info m-3">Breakfast</button> 
+                <div className="col-sm-6 gitgrub-btn">
+                    <div onClick={() => {handleClick(2)}} className="gitgrub-btn display-5 m-3">Breakfast</div> 
                 </div>
-                <div className="col-sm-6 bg-info text-light">
-                    <button onClick={() => {handleClick(1)}} className="btn btn-info m-3">Appetizers</button>
-                </div>
-            </div>
-            <div className="row text-center">
-                <div className="col-sm-6 bg-info text-light">
-                    <button onClick={() => {handleClick(3)}} className="btn btn-info m-3">Brunch</button>
-                </div>
-                <div className="col-sm-6 bg-info text-light">
-                    <button onClick={() => {handleClick(4)}} className="btn btn-info m-3">Lunch</button>
+                <div className="col-sm-6 gitgrub-btn">
+                    <div onClick={() => {handleClick(1)}} className="gitgrub-btn display-5 m-3">Appetizers</div>
                 </div>
             </div>
             <div className="row text-center">
-                <div className="col-sm-6">
-                    <button onClick={() => {handleClick(5)}} className="btn btn-info m-3">Dinner</button>
+                <div className="col-sm-6 gitgrub-btn">
+                    <div onClick={() => {handleClick(3)}} className="gitgrub-btn display-5 m-3">Brunch</div>
                 </div>
-                <div className="col-sm-6">
-                    <button onClick={() => {handleClick(7)}} className="btn btn-info m-3">Desserts</button>
+                <div className="col-sm-6 gitgrub-btn">
+                    <div onClick={() => {handleClick(4)}} className="gitgrub-btn display-5 m-3">Lunch</div>
                 </div>
             </div>
             <div className="row text-center">
-                <div className="col">
-                    <button onClick={() => {handleClick(6)}} className="btn btn-info m-3">Sides</button>
+                <div className="col-sm-6 gitgrub-btn">
+                    <div onClick={() => {handleClick(5)}} className="gitgrub-btn display-5 m-3">Dinner</div>
+                </div>
+                <div className="col-sm-6 gitgrub-btn">
+                    <div onClick={() => {handleClick(7)}} className="gitgrub-btn display-5 m-3">Desserts</div>
+                </div>
+            </div>
+            <div className="row text-center">
+                <div className="col gitgrub-btn">
+                    <div onClick={() => {handleClick(6)}} className="gitgrub-btn display-5 m-3">Sides</div>
                 </div>
             </div>
         <div/>
