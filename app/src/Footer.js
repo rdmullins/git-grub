@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <div className="bg-primary p-2 bottom">
+        <div className="gitgrub-navbar-brand m-4 p-2 bottom">
             <div className="row">
                 <div className="col-4">
                     <p>Site Created by Roger Mullins</p>

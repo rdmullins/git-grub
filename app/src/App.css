@@ -9,6 +9,12 @@ body {
     background-color: #304875;
 }
 
+.gitgrub-btn {
+    background-color: #304875;
+    font-family: 'Gemunu Libre', sans-serif;
+    color: #AFC8F7;
+}
+
 .menu-title {
     color: #304875;
     font-family: 'Gemunu Libre', sans-serif;
@@ -28,5 +34,5 @@ body {
 .gitgrub-navbar-brand {
     background-color: #AFC8F7;
     font-family: 'Gemunu Libre', sans-serif;
-    color: white;
+    color: #304875;
 }

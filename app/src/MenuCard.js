@@ -7,16 +7,19 @@ function MenuCard(menu) {
     //const listItems = menu.menuData.map(dish => <div className="card text-center"><div className="card-header"></div><div className="card-body"><h5 className="card-title">{dish.title}</h5><p className="card-text">{dish.description}</p></div><div className="card-footer text-muted">{dish.price}</div></div>);
 
     const listItems = menu.menuData.map(dish =>
-        (<div className="card text-center">
-            <div className="card-header"></div>
-            <div className="card-body">
-                <h5 className="card-title menu-title">{dish.title}</h5>
-                <p className="card-text text-muted menu-body">{dish.description}</p>
+        (
+            <div className="col">
+                <div className="card shadow-lg h-100 text-center">
+                    <div className="card-header"><h5 className="card-title menu-title">{dish.title}</h5></div>
+                    <div className="card-body">
+                        <p className="card-text text-muted menu-body">{dish.description}</p>
+                    </div>
+                    <div className="card-footer menu-title">
+                        {dish.price}
+                    </div>
+                </div>
             </div>
-            <div className="card-footer menu-title">
-                {dish.price}
-            </div>
-        </div>)
+        )
         );
 
     return (
@@ -29,8 +32,7 @@ function MenuCard(menu) {
             {(menu.page === 6) && <h1>Side Dishes</h1>}
             {(menu.page === 7) && <h1>Desserts</h1>}
     
-    
-    <ul>{listItems}</ul>
+            <div class="row row-cols-1 row-cols-md-3 g-4">{listItems}</div>
     
     </div>
     )
