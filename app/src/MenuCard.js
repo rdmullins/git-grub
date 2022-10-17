@@ -10,17 +10,17 @@ function MenuCard(menu) {
         (<div className="card text-center">
             <div className="card-header"></div>
             <div className="card-body">
-                <h5 className="card-title">{dish.title}</h5>
-                <p className="card-text">{dish.description}</p>
+                <h5 className="card-title menu-title">{dish.title}</h5>
+                <p className="card-text text-muted menu-body">{dish.description}</p>
             </div>
-            <div className="card-footer text-muted">
+            <div className="card-footer menu-title">
                 {dish.price}
             </div>
         </div>)
         );
 
     return (
-        <div className="container text-center">
+        <div className="container text-center gitgrub-brand">
             {(menu.page === 1) && <h1>Appetizers</h1>}
             {(menu.page === 2) && <h1>Breakfast</h1>}
             {(menu.page === 3) && <h1>Brunch</h1>}

@@ -6,7 +6,7 @@ function Splash(props) {
     };
 
     return (
-        <div className="container bg-primary p-3">
+        <div className="container gitgrub-bg p-3">
             <div className="row bg-light text-center p-5" height="60vh">
                 <img src="../GitGrubCropped.png" alt="Restaurant Logo"></img>
             </div>
