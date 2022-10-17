@@ -5,7 +5,7 @@ function Specials(props) {
     };
 
 return (
-    <div className="container text-center bg-primary">
+    <div className="container text-center">
         <div className="row">
             <div className="col">
                 <h1>Today's Special</h1>

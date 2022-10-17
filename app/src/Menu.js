@@ -5,7 +5,7 @@ function Menu (props) {
     };
 
     return (
-        <div className="container bg-primary text-light">
+        <div className="container gitgrub-brand">
             <div className="row text-center">
                 <div className="col">
                     <h1>Our Menu</h1>

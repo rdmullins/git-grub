@@ -5,10 +5,10 @@ function Navbar(props) {
     };
 
     return (
-        <nav className="navbar navbar-expand-lg text-bg-primary sticky-top">
-            <div className="container-fluid">
-                <div className="navbar-brand">
-                    <img src="../GitGrubCropped.png" alt="Restaurant Logo" width="15%"></img>
+        <nav className="navbar navbar-expand-lg text-bg-primary gitgrub-navbar-brand sticky-top">
+            <div className="container-fluid gitgrub-navbar-brand">
+                <div className="navbar-brand gitgrub-navbar-brand">
+                    GitGrub
                     <small>7-11 Daily</small>
                 </div>
 
@@ -16,7 +16,7 @@ function Navbar(props) {
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <div className="collapse navbar-collapse gitgrub-navbar-brand" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
                             <button onClick={() => {handleClick(2)}} className="btn btn-info m-1">Breakfast</button>

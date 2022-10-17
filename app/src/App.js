@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import Splash from "./Splash";
+import "./App.css";
 import MenuCard from "./MenuCard";
 import Menu from "./Menu";
 import Navbar from "./Navbar";

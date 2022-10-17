@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@700&family=Palanquin+Dark:wght@600&display=swap');
+
+body {
+    background-color: #304875;
+}
+
+.gitgrub-bg {
+    background-color: #304875;
+}
+
+.menu-title {
+    color: #304875;
+    font-family: 'Gemunu Libre', sans-serif;
+}
+
+.menu-body {
+    font-family: 'Palanquin Dark', sans-serif;
+    color: #304875;
+}
+
+.gitgrub-brand {
+    background-color: #304875;
+    font-family: 'Gemunu Libre', sans-serif;
+    color: white;
+}
+
+.gitgrub-navbar-brand {
+    background-color: #AFC8F7;
+    font-family: 'Gemunu Libre', sans-serif;
+    color: white;
+}
