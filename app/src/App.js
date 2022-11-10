@@ -62,10 +62,13 @@ const [page, setPage] = useState(0);
 //console.log(menuData);
 
 useEffect(() => {
-  let endpoint = "https://astute-baton-362318.ue.r.appspot.com/api/json/"
+  let endpoint = "https://8000-rdmullins-backendbistro-m5c0vr4rbyd.ws-us75.gitpod.io/menu/fullmenu"
   axios.get(endpoint)
     .then((response)=> setMenuData(response.data))
 },[]);
+
+  //console.log(menuData);
+  //console.log(menuData[0].description);
 
     //console.log("Inside App function.");
     //const [post] = React.useState(null);
