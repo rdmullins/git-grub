@@ -62,7 +62,8 @@ const [page, setPage] = useState(0);
 //console.log(menuData);
 
 useEffect(() => {
-  let endpoint = "https://8000-rdmullins-backendbistro-m5c0vr4rbyd.ws-us75.gitpod.io/menu/fullmenu"
+  //let endpoint = "https://8000-rdmullins-backendbistro-m5c0vr4rbyd.ws-us75.gitpod.io/menu/fullmenu"
+  let endpoint = "https://8000-rdmullins-backendbistro-m5c0vr4rbyd.ws-us75.gitpod.io/dishes/"
   axios.get(endpoint)
     .then((response)=> setMenuData(response.data))
 },[]);
@@ -73,6 +74,7 @@ useEffect(() => {
     //console.log("Inside App function.");
     //const [post] = React.useState(null);
     
+    console.log(menuData);
     menuParser(menuData);
     getSpecials();
 
